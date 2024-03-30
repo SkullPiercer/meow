@@ -1,9 +1,10 @@
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
-
+app_name = 'cat'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('cats.urls', namespace='cat')),
+    path('', views.HomeTemplateView.as_view(), name='home'),
 ]
