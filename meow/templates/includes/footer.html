@@ -1,1 +1,20 @@
-Это блок Футер
+{% load static %}
+
+<div class="footer">
+  <img src="{% static 'img/lapka.jpg' %}" alt="Footer Image">
+  <div class="footer-blocks">
+    <div class="footer-block">
+      <h3>Условия использования</h3>
+      <p>Insert your terms of use here.</p>
+    </div>
+    <div class="footer-block">
+      <h3>Контакты автора</h3>
+      <p>Email: author@example.com<br>Phone: +1 234 567 890</p>
+    </div>
+    <div class="footer-block">
+      <h3>Политика конфиденциальности</h3>
+      <p>Insert your privacy policy here.</p>
+    </div>
+  </div>
+</div>
+

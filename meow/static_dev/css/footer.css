@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer {
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .footer img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .footer-blocks {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-block {
+    width: 30%; /* Adjust the width of each block */
+  }
+  
+  .footer-block h3 {
+    color: #333;
+  }
+  
+  .footer-block p {
+    color: #666;
+    font-size: 14px;
+  }
+  
