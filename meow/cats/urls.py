@@ -6,5 +6,5 @@ app_name = 'cat'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.HomeTemplateView.as_view(), name='home'),
+    path('create/', views.PostCreateView.as_view(), name='create_post'),
 ]
