@@ -15,12 +15,20 @@ class Category(models.Model):
                   'латиницы, цифры, дефис и подчёркивание.'
     )
 
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Категория'
+        verbose_name_plural = 'Категории'
+
 
 class Location(models.Model):
     name = models.CharField(
         'Название места',
         max_length=256,
     )
+    is_published = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
@@ -56,3 +64,10 @@ class Post(models.Model):
         verbose_name='Категория',
         related_name='category_post'
     )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Пост'
+        verbose_name_plural = 'Посты'

@@ -3,5 +3,15 @@
 {% block title %} Welcome to cats gallery {% endblock %}
 
 {% block content %}
-    Тут будет контент связанный с котами
+    {{ post.title }} <br>
+    {% if post.image %}
+        {{ post.image }} <br>
+    {% endif %}
+    {% if post.video %}
+        {{ post.video }} <br>
+    {% endif %}
+    {{ post.date }} <br>
+    {{ post.author }} <br>
+    {{ post.location }} <br>
+    {{ post.category }} <br>
 {% endblock %}
