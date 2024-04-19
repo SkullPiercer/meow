@@ -5,7 +5,7 @@
 {% block content %}
     {{ post.title }} <br>
     {% if post.image %}
-        {{ post.image }} <br>
+        <img src="{{ post.image }}" width="300px"> <br>
     {% endif %}
     {% if post.video %}
         {{ post.video }} <br>
