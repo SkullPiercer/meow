@@ -3,15 +3,21 @@
 {% block title %} Welcome to cats gallery {% endblock %}
 
 {% block content %}
-    {{ post.title }} <br>
-    {% if post.image %}
-        <img src="{{ post.image }}" width="300px"> <br>
-    {% endif %}
-    {% if post.video %}
-        {{ post.video }} <br>
-    {% endif %}
-    {{ post.date }} <br>
-    {{ post.author }} <br>
-    {{ post.location }} <br>
-    {{ post.category }} <br>
+    
+<div class="centered-content">
+    <div class="home_box">
+        {{ post.title }} <br>
+        {% if post.image %}
+            <img src="{{ post.image }}"> <br>
+        {% endif %}
+        {% if post.video %}
+            <video src="{{ post.video }}" controls></video> <br>
+        {% endif %}
+        {{ post.date }} <br>
+        {{ post.author }} <br>
+        {{ post.location }} <br>
+        {{ post.category }} <br>
+    </div>
+</div>
+
 {% endblock %}
