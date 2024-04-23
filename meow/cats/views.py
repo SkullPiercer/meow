@@ -3,7 +3,7 @@ from django.urls import reverse_lazy, reverse
 from django.shortcuts import render
 
 from .forms import PostForm
-from .models import Post
+from .models import Category, Post
 
 
 class PostCreateView(CreateView):
@@ -18,4 +18,8 @@ class PostCreateView(CreateView):
 
 
 def categories(request):
-    return render(request, 'cats/cats.html')
+    categories = Category.objects.filter(
+        is_published=True
+    )
+    context = {'categories': categories}
+    return render(request, 'cats/categories.html', context)

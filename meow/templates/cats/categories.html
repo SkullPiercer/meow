@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+{% for category in categories %}
+  {{ category.title }} <br>
+{% endfor %}
+{% endblock %}
