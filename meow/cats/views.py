@@ -20,6 +20,6 @@ class PostCreateView(CreateView):
 def categories(request):
     categories = Category.objects.filter(
         is_published=True
-    )
+    ).order_by('title')
     context = {'categories': categories}
     return render(request, 'cats/categories.html', context)
