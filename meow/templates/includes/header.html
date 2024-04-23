@@ -19,7 +19,7 @@
     <div class="btn-group" role="group" aria-label="Basic outlined example">
       <a class="nav-link fs-2" href="{% url 'cat:create_post' %}">Написать пост</a>
       <a class="nav-link fs-2" href="#">{{ user.username }}</a>
-      <a class="nav-link fs-2" href="#">Выйти</a>
+      <a class="nav-link fs-2" href="{% url 'logout' %}">Выйти</a>
     </div>
     {% else %}
     <div class="btn-group" role="group" aria-label="Basic outlined example">
